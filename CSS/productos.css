@@ -1,0 +1,93 @@
+@import url(/CSS/principal.css);
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(255, 253, 253, 0.555);
+    text-align: center;
+    gap: 20px;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #fffbfb;
+}
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+
+.imagenes {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: 200px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.imagenes:hover {
+    transform: scale(1.05);
+}
+
+
+.imagenes img {
+    width: 90%;
+    height: 250px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+
+.item-info {
+    padding: 10px;
+}
+
+.item-info h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.item-info p {
+    color: #666;
+}
+
+@media (max-width: 1000px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
